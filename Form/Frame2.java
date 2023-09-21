@@ -26,7 +26,7 @@ public class Frame2 extends javax.swing.JFrame {
         DefaultTableModel model = (DefaultTableModel) jTable3.getModel();
         model.setRowCount(0);
         int limit = 10;
-        int offset = (page - 1) * limit; // Hitung offset
+        int offset = (page - 1) * limit;
 
         try {
             String sql = "SELECT * FROM data_pasien LIMIT ? OFFSET ?";
@@ -379,7 +379,7 @@ public class Frame2 extends javax.swing.JFrame {
                 PreparedStatement st = con.prepareStatement(sql);
 
                 // Ambil nilai 'no' dari baris yang dipilih
-                String no = jTable3.getValueAt(selectedRow, 0).toString(); // Gantilah 0 dengan indeks kolom yang sesuai
+                String no = jTable3.getValueAt(selectedRow, 0).toString(); 
 
                 st.setString(1, no);
 
